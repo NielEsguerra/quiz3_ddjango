@@ -1,0 +1,91 @@
+[
+  {
+    "model": "main.student",
+    "pk": 1,
+    "fields": {
+      "student_id": "01",
+      "name": "Santos, Miguel",
+      "department": "BSIT",
+      "age": 19,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 2,
+    "fields": {
+      "student_id": "02",
+      "name": "Villanueva, Andrea",
+      "department": "BSIT",
+      "age": 20,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 3,
+    "fields": {
+      "student_id": "03",
+      "name": "Mendoza, Carlo",
+      "department": "BSIT",
+      "age": 20,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 4,
+    "fields": {
+      "student_id": "04",
+      "name": "Reyes, Jasmine",
+      "department": "BSIT",
+      "age": 19,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 5,
+    "fields": {
+      "student_id": "05",
+      "name": "Navarro, Paolo",
+      "department": "BSIT",
+      "age": 22,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 6,
+    "fields": {
+      "student_id": "06",
+      "name": "Flores, Bianca",
+      "department": "BSIT",
+      "age": 19,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 7,
+    "fields": {
+      "student_id": "07",
+      "name": "Bautista, Rafael",
+      "department": "BSIT",
+      "age": 21,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 8,
+    "fields": {
+      "student_id": "08",
+      "name": "Dela Cruz, Camille",
+      "department": "BSIT",
+      "age": 20,
+      "gender": "Female"
+   
+    }
+  }
+]

@@ -1,0 +1,472 @@
+:root {
+    --deer-brown: #E6BF83;
+    --french-beige: #C8AD7F;
+
+    --dark-brown: #4A3728;
+    --medium-brown: #6B4F35;
+    --light-brown: #8A6A48;
+
+    --cream: #F8F3EA;
+    --white: #FFFFFF;
+
+    --shadow: 0 12px 30px rgba(74, 55, 40, 0.14);
+}
+
+
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(230, 191, 131, 0.30),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(200, 173, 127, 0.22),
+            transparent 28%
+        ),
+        var(--cream);
+
+    color: var(--dark-brown);
+
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.page-shell {
+    width: min(1120px, 92%);
+    margin: 36px auto 45px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   STUDENT LIST BOX
+   DEER BROWN
+   #E6BF83
+   ========================= */
+
+.hero-card {
+    min-height: 290px;
+
+    border: 1px solid rgba(74, 55, 40, 0.12);
+    border-radius: 28px;
+
+    background: var(--deer-brown);
+
+    box-shadow: var(--shadow);
+
+    padding: 30px 38px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Simple background shape */
+
+.hero-card::after {
+    content: "";
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    right: -70px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Small heading */
+
+.tiny-label {
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    font-size: 15px;
+
+    color: var(--medium-brown);
+}
+
+
+/* Main heading area */
+
+.hero-content {
+    text-align: center;
+
+    max-width: 720px;
+
+    margin: 48px auto 0;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Main title */
+
+h1 {
+    margin: 0;
+
+    color: var(--dark-brown);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 8vw, 78px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    margin: 20px auto 0;
+
+    max-width: 570px;
+
+    color: var(--medium-brown);
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   INFORMATION STRIP
+   ========================= */
+
+.info-strip {
+    width: fit-content;
+
+    margin: 22px auto 26px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: var(--dark-brown);
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    box-shadow: 0 8px 18px rgba(74, 55, 40, 0.15);
+}
+
+
+.dot {
+    margin: 0 8px;
+
+    opacity: 0.6;
+}
+
+
+/* =========================
+   STUDENT GRID
+   ========================= */
+
+.student-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================
+   STUDENT RECORD BOX
+   LIGHT FRENCH BEIGE
+   #C8AD7F
+   ========================= */
+
+.student-card {
+    min-height: 235px;
+
+    background: var(--french-beige);
+
+    color: var(--dark-brown);
+
+    border-radius: 22px;
+
+    padding: 24px 25px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Decorative soft circle */
+
+.student-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    right: -45px;
+    bottom: -48px;
+}
+
+
+/* Hover effect */
+
+.student-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 16px 35px rgba(74, 55, 40, 0.20);
+}
+
+
+/* =========================
+   CARD TOP
+   ========================= */
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Student number */
+
+.student-number {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+
+    color: var(--dark-brown);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   STUDENT NAME
+   ========================= */
+
+.student-name {
+    margin: 18px 0 17px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    color: var(--dark-brown);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   DETAILS
+   ========================= */
+
+.details {
+    border-top:
+        1px solid rgba(74, 55, 40, 0.25);
+
+    padding-top: 13px;
+}
+
+
+.detail-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 7px 0;
+
+    font-size: 11px;
+}
+
+
+/* Detail label */
+
+.label {
+    color: var(--medium-brown);
+
+    opacity: 0.85;
+
+    letter-spacing: 0.7px;
+
+    font-weight: 700;
+}
+
+
+/* Detail value */
+
+.value {
+    color: var(--dark-brown);
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+.empty-card {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    background: var(--french-beige);
+
+    border-radius: 22px;
+
+    padding: 55px 20px;
+
+    color: var(--dark-brown);
+
+    box-shadow: var(--shadow);
+}
+
+
+.empty-card h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+
+    margin: 10px 0;
+}
+
+
+.empty-card p {
+    margin: 0;
+
+    color: var(--medium-brown);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+
+    color: var(--light-brown);
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-card {
+        min-height: 250px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 560px) {
+
+    .page-shell {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+
+    .hero-card {
+        padding: 24px;
+
+        min-height: 235px;
+    }
+
+
+    .hero-content {
+        margin-top: 45px;
+    }
+
+
+    h1 {
+        font-size: 48px;
+    }
+
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-strip {
+        text-align: center;
+    }
+}
